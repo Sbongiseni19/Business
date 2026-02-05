@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngema Transport and Logistics - Reliable Road Freight Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional road freight services focused on safety, reliability, and long-term partnerships.">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --primary-dark: #0a3a66;
+            --secondary: #f8b500;
+            --light: #f8f9fb;
+            --dark: #1f2933;
+            --gray: #6b7280;
+            --success: #25d366;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * { 
+            margin:0; 
+            padding:0; 
+            box-sizing:border-box; 
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif;
+            background:#fff; 
+            color:var(--dark); 
+            line-height:1.6; 
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            height:100vh;
+            min-height: 600px;
+            background: linear-gradient(135deg, rgba(15, 76, 129, 0.9) 0%, rgba(10, 58, 102, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
+            display:flex; 
+            align-items:center; 
+            justify-content:center;
+            color:#fff; 
+            text-align:center; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeUp 1.2s ease-out;
+        }
+
+        header img { 
+            width: 160px; 
+            margin-bottom: 30px; 
+            filter: brightness(0) invert(1);
+            animation: fadeDown 1s ease;
+        }
+
+        header h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 20px; 
+            letter-spacing: -0.5px;
+        }
+
+        header p { 
+            font-size: 1.3rem; 
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 16px 36px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin: 8px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: transparent;
+            border-color: var(--secondary);
+            color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: white;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title { 
+            font-size: 2.5rem; 
+            margin-bottom: 20px; 
+            color: var(--primary); 
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+
+        /* Who We Are */
+        .intro-section {
+            background: white;
+            text-align: center;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* CEO Section */
+        .ceo-section { 
+            background: var(--light); 
+        }
+
+        .ceo-container { 
+            display: flex; 
+            gap: 60px; 
+            flex-wrap: wrap; 
+            align-items: center;
+        }
+
+        .ceo-image { 
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .ceo-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--secondary);
+            border-radius: var(--radius);
+            top: 20px;
+            left: 20px;
+            z-index: 0;
+        }
+
+        .ceo-image img { 
+            width: 100%; 
+            max-width: 400px;
+            border-radius: var(--radius); 
+            position: relative;
+            z-index: 1;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .ceo-image img:hover {
+            transform: translateY(-10px);
+        }
+
+        .ceo-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .ceo-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .ceo-title { 
+            font-weight: 600; 
+            color: var(--primary); 
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(15, 76, 129, 0.1);
+            border-radius: 50px;
+        }
+
+        .ceo-info p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        /* Services */
+        .services-section {
+            background: white;
+        }
+
+        .services { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .box { 
+            background: white;
+            padding: 40px 30px; 
+            border-radius: var(--radius); 
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--secondary);
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover::before {
+            transform: scaleX(1);
+        }
+
+        .box i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: white;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--radius);
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        form {
+            max-width: 800px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group:nth-child(5),
+        .form-group:nth-child(6),
+        .form-group:nth-child(7),
+        .form-group:nth-child(8) {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+            .form-group:nth-child(5),
+            .form-group:nth-child(6),
+            .form-group:nth-child(7),
+            .form-group:nth-child(8) {
+                grid-column: span 1;
+            }
+        }
+
+        input, textarea, select {
+            padding: 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: var(--radius);
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.95rem;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-tagline {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #d1d5db;
+        }
+
+        .copyright {
+            color: #9ca3af;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--success);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(40px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        @keyframes fadeDown {
+            from { 
+                opacity: 0; 
+                transform: translateY(-20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 90vh;
+                min-height: 500px;
+                background-attachment: scroll;
+            }
+            
+            header h1 {
+                font-size: 2.3rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .ceo-container {
+                text-align: center;
+                justify-content: center;
+                gap: 40px;
+            }
+            
+            .ceo-image::before {
+                display: none;
+            }
+            
+            form {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 14px 28px;
+                margin: 5px;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .whatsapp {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="logo.png" alt="Ngema Transport and Logistics Logo">
+        <h1>Ngema Transport and Logistics</h1>
+        <p>Reliable Road Freight & Professional Trucking Solutions Across Southern Africa</p>
+        <div class="header-buttons">
+            <a href="#contact" class="btn btn-primary">Request a Quote</a>
+            <a href="#services" class="btn">Our Services</a>
+        </div>
+    </div>
+</header>
+
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-content fade-in">
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-subtitle">Professional road freight services focused on safety, reliability, and long-term partnerships.</p>
+            <p>With years of experience in the logistics industry, Ngema Transport and Logistics provides efficient, safe, and reliable transportation solutions. We understand that your cargo is valuable, and we treat it with the care and professionalism it deserves.</p>
+        </div>
+    </div>
+</section>
+
+<section class="ceo-section">
+    <div class="container">
+        <div class="ceo-container">
+            <div class="ceo-image fade-in">
+                <img src="ceo.jpg" alt="Sibongiseni Ngema">
+            </div>
+            <div class="ceo-info fade-in">
+                <h2 class="section-title">Meet the Founder & CEO</h2>
+                <h3>Sibongiseni Ngema</h3>
+                <p class="ceo-title">CEO | Software Engineer | Entrepreneur</p>
+                <p>
+                    Sibongiseni Ngema is the visionary Founder and CEO of Ngema Transport and Logistics.
+                    He combines deep logistics expertise with technology-driven thinking to deliver
+                    reliable, efficient transport solutions that meet modern business needs.
+                </p>
+                <p>
+                    With a background in software engineering, Sibongiseni brings innovative approaches
+                    to traditional logistics, ensuring real-time tracking, efficient routing, and
+                    seamless communication throughout the transportation process.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services-section">
+    <div class="container">
+        <h2 class="section-title fade-in">Our Services</h2>
+        <p class="section-subtitle fade-in">Comprehensive logistics solutions tailored to your business needs</p>
+        
+        <div class="services">
+            <div class="box fade-in">
+                <i class="fas fa-truck-moving"></i>
+                <h3>Road Freight Transport</h3>
+                <p>Efficient and reliable transportation of goods across regional and national routes.</p>
+            </div>
+            <div class="box fade-in">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Local & Regional Deliveries</h3>
+                <p>Timely delivery services within cities and across provincial boundaries.</p>
+            </div>
+            <div class="box fade-in">
+                <i class="fas fa-truck-loading"></i>
+                <h3>Dedicated Trucking Solutions</h3>
+                <p>Customized transportation plans for businesses with specific logistical needs.</p>
+            </div>
+            <div class="box fade-in">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cargo Safety & Load Securing</h3>
+                <p>Professional securing and monitoring to ensure your cargo arrives safely.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="why-us" class="ceo-section">
+    <div class="container">
+        <h2 class="section-title fade-in">Why Choose Us</h2>
+        <p class="section-subtitle fade-in">We deliver excellence in every mile</p>
+        
+        <div class="services">
+            <div class="box fade-in">
+                <i class="fas fa-clock"></i>
+                <h3>On-Time Delivery</h3>
+                <p>We pride ourselves on punctuality and meeting delivery deadlines consistently.</p>
+            </div>
+            <div class="box fade-in">
+                <i class="fas fa-user-shield"></i>
+                <h3>Experienced Drivers</h3>
+                <p>Our professional drivers are trained in safety protocols and efficient routing.</p>
+            </div>
+            <div class="box fade-in">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock customer support to address your concerns and track shipments.</p>
+            </div>
+            <div class="box fade-in">
+                <i class="fas fa-award"></i>
+                <h3>Quality Assurance</h3>
+                <p>Rigorous quality checks and maintenance schedules for all our vehicles.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title fade-in">Contact Us / Request a Quote</h2>
+        <p class="section-subtitle fade-in">Get in touch for reliable transportation solutions</p>
+        
+        <div class="contact-info fade-in">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <strong>Email</strong><br>
+                    <a href="mailto:ngemasbongiseni00@gmail.com">ngemasbongiseni00@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <strong>Phone</strong><br>
+                    <a href="tel:0767288529">076 728 8529</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <strong>Business Hours</strong><br>
+                    Mon - Fri: 8:00 AM - 6:00 PM<br>
+                    Sat: 9:00 AM - 1:00 PM
+                </div>
+            </div>
+        </div>
+
+        <form action="https://formsubmit.co/ngemasbongiseni00@gmail.com" method="POST" class="fade-in">
+            <input type="hidden" name="_subject" value="New Transport Quote Request - Ngema Transport">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+            <div class="form-group">
+                <input type="text" name="Name" placeholder="Full Name *" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Company" placeholder="Company Name">
+            </div>
+            <div class="form-group">
+                <input type="tel" name="Phone" placeholder="Phone Number *" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="Email" placeholder="Email Address *" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Pickup" placeholder="Pickup Location *" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Delivery" placeholder="Delivery Location *" required>
+            </div>
+            <div class="form-group">
+                <select name="Service_Type" required>
+                    <option value="" disabled selected>Select Service Type *</option>
+                    <option value="Road Freight">Road Freight Transport</option>
+                    <option value="Local Delivery">Local Delivery</option>
+                    <option value="Regional Delivery">Regional Delivery</option>
+                    <option value="Dedicated Trucking">Dedicated Trucking</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea name="Cargo_Details" rows="4" placeholder="Cargo Details (Type, Weight, Dimensions, Special Requirements) *" required></textarea>
+            </div>
+            
+            <div class="form-group" style="grid-column: span 2;">
+                <button class="btn btn-primary" type="submit" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Send Quote Request
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <img src="logo.png" alt="Ngema Transport and Logistics Logo" class="footer-logo">
+        <p class="footer-tagline">Reliable Road Freight • Trusted Trucking Solutions</p>
+        <p>Professional logistics services you can count on. Safety, reliability, and efficiency in every delivery.</p>
+        <div class="copyright">
+            © 2026 Ngema Transport and Logistics. All rights reserved.<br>
+            Built with excellence for businesses across Southern Africa.
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP WITH PRE-FILLED MESSAGE -->
+<a href="https://wa.me/27767288529?text=Hello%20Ngema%20Transport%20and%20Logistics,%20I%20would%20like%20to%20request%20a%20quote%20for%20transport%20services."
+   class="whatsapp" target="_blank" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    // Scroll animations
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    fadeElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Form submission handling
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Reset button after 5 seconds (in case of error)
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 5000);
+        });
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
